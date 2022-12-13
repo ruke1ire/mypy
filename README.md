@@ -46,7 +46,7 @@ To query the changing variables, the function should use function attributes:
 
 - The ability to print on a different terminal.
 ```console
-extout # or run python3 exout.py
+extout # or run python3 extout.py
 ```
 ```python
 print('Hello different terminal...')
