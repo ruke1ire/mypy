@@ -1,7 +1,5 @@
 # mypy
-
 A library that makes using the Python Interpreter more convenient for Neural Network testing and training.
-
 ## Usage
 
 Import the functionalities.
@@ -59,16 +57,16 @@ Import the functionalities.
 >>> reload()
 ```
 
-- The abilty to restart the kernel and clear out all declared variables.
+- The ability to restart the kernel and clear out all declared variables.
 ```python
 >>> refresh()
 ```
 
 - The ability to print on a different terminal.
 ```console
-echo 'On another terminal'
-python3 -m mypy.extout
+extout # or python3 extout.py
 ```
+print() on the main python interpreter will be relayed to extout:
 ```python
 print('Hello different terminal...')
 ```
