@@ -10,6 +10,19 @@ Import the functionalities.
 ### Functionalities
 
 - The ability to asynchronously run functions, and query the changing variables in the function/class.
+```python
+>>> async_run(func_name, *args, **kwargs)
+```
+To query the changing variables, the function should use function attributes:
+```python
+def func_name():
+    func_name.x = 0
+    while True:
+        func_name.x += 1
+
+async_run(func_name)
+print(func_name.x)
+```
 
 - The ability to write a function/class in a separate file, and import it without having to restart the python kernel.
 ```python

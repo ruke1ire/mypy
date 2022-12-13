@@ -4,8 +4,23 @@ import sys
 import io
 from threading import Thread
 
+def refresh():
+    globals_ = globals().copy()
+    for name in globals_:
+        if (name[:2] != "__"):
+            del globals()[name]
+
 def reload(packname):
     importlib.reload(packname)
+
+def async_run(func, *args, **kwargs):
+    '''
+    Asynchronously runs a function that returns None.
+    '''
+    t = Thread(target=func, args=args, kwargs=kwargs)
+    t.daemon = True
+    t.start()
+    return t
 
 __prev_stdout = sys.stdout
 sys.stdout = buffer = io.StringIO()
@@ -32,10 +47,6 @@ def udp_print_loop():
             buffer.seek(0)
             buffer.truncate(0)
 
-Thread(target=udp_print_loop).start()
-
-def refresh():
-    globals_ = globals().copy()
-    for name in globals_:
-        if (name[:2] != "__"):
-            del globals()[name]
+udp_thread = Thread(target=udp_print_loop)
+udp_thread.daemon = True
+udp_thread.start()
