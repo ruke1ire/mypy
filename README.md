@@ -36,4 +36,6 @@ print('Hello different terminal...')
 git clone https://github.com/ruke1ire/mypy.git
 cd mypy
 pip3 install .
+echo "# mypy python package" >> ~/.bashrc
+echo "alias extout='python3 $PWD/extout.py'" >> ~/.bashrc
 ```
