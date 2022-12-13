@@ -49,6 +49,5 @@ To query the changing variables, the function should use function attributes:
 extout # or run python3 extout.py
 ```
 ```python
->>> print('Hello different terminal...')
+>>> prext('Hello different terminal...')
 ```
-
