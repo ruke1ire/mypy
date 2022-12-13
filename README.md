@@ -15,7 +15,7 @@ Import the functionalities.
 
 - The ability to write a function/class in a separate file, and import it without having to restart the python kernel.
 ```python
->>> reload()
+>>> reload(package_name)
 ```
 
 - The abilty to restart the kernel and clear out all declared variables.
