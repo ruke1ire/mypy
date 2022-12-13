@@ -1,5 +1,16 @@
 # mypy
 A library that makes using the Python Interpreter more convenient for Neural Network testing and training.
+
+## Install 
+
+```console
+git clone https://github.com/ruke1ire/mypy.git
+cd mypy
+pip3 install .
+echo "# mypy python package" >> ~/.bashrc
+echo "alias extout='python3 $PWD/extout.py'" >> ~/.bashrc
+```
+
 ## Usage
 
 Import the functionalities.
@@ -35,19 +46,9 @@ To query the changing variables, the function should use function attributes:
 
 - The ability to print on a different terminal.
 ```console
-echo 'On another terminal'
-python3 -m mypy.extout
+exout # or run python3 exout.py
 ```
 ```python
 print('Hello different terminal...')
 ```
 
-## Install 
-
-```console
-git clone https://github.com/ruke1ire/mypy.git
-cd mypy
-pip3 install .
-echo "# mypy python package" >> ~/.bashrc
-echo "alias extout='python3 $PWD/extout.py'" >> ~/.bashrc
-```
